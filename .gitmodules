@@ -1,0 +1,7 @@
+﻿[submodule "Backend-Alunos"]
+    path = Backend-Alunos
+    url = https://github.com/rafabalko/Backend-Alunos.git
+
+[submodule "Frontend-Alunos"]
+    path = Frontend-Alunos
+    url = https://github.com/rafabalko/Frontend-Alunos.git
