@@ -33,6 +33,8 @@ services:
       dockerfile: Dockerfile.frontend
     container_name: agrupa-frontend
     restart: always
+    ports:
+      - "38082:80"
     depends_on:
       - backend
 
