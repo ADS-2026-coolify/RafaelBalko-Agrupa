@@ -10,8 +10,6 @@ services:
       MYSQL_DATABASE: agrupadb
       MYSQL_USER: agrupauser
       MYSQL_PASSWORD: agrupapassword
-    ports:
-      - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
 
@@ -21,8 +19,6 @@ services:
       dockerfile: Dockerfile.backend
     container_name: agrupa-backend
     restart: always
-    ports:
-      - "8080:8080"
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://database:3306/agrupadb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
       SPRING_DATASOURCE_USERNAME: agrupauser
@@ -37,8 +33,6 @@ services:
       dockerfile: Dockerfile.frontend
     container_name: agrupa-frontend
     restart: always
-    ports:
-      - "80:80"
     depends_on:
       - backend
 
